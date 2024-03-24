@@ -1,18 +1,25 @@
 package br.com.EduardoNunesSoftwareEnguineer.SpringBootProject01.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_user")
 public class Users implements Serializable {
     @Serial
     private static  final long serialVersionUID = 1L;
+    @Id
     private Long id;
     private String name;
     private String email;
     private String phone;
     private String password;
-    private Users(){
+    public Users(){
     }
 
     public Users(Long id, String name, String email, String phone, String password) {
