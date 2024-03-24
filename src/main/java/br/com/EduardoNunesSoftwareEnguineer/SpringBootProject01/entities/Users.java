@@ -1,8 +1,12 @@
 package br.com.EduardoNunesSoftwareEnguineer.SpringBootProject01.entities;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Users {
+public class Users implements Serializable {
+    @Serial
+    private static  final long serialVersionUID = 1L;
     private Long id;
     private String name;
     private String email;
@@ -71,5 +75,5 @@ public class Users {
     public int hashCode() {
         return Objects.hash(id);
     }
-    
+
 }
